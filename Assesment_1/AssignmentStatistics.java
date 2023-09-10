@@ -30,5 +30,9 @@ public class AssignmentStatistics
             }
             marks[i] = mark;
         }
-    }
+
+    // Printing the assignment name
+     System.out.println("Assignment Name is: " + assignmentName);
+        
+}
 }
