@@ -22,7 +22,7 @@ public class AssignmentStatistics
         for (int i = 0; i < 30; i++) {
             int mark = -1; // Invalid mark error massage 
             while (mark < 0 || mark > 30) {
-                System.out.print("Enter student mark " + (i + 1) + ": ");
+                System.out.print("Enter student mark here " + (i + 1) + ": ");
                 mark = scanner.nextInt();
                 if (mark < 0 || mark > 30) {
                     System.out.println("You have entered an invalid amount. Please enter amount between 0 and 30.");
@@ -45,14 +45,14 @@ public class AssignmentStatistics
         int lowestMark = findLowestMark(marks);
         
         // Display highest and lowest marks
-        System.out.println("Highest Mark is: " + highestMark);
-        System.out.println("Lowest Mark: " + lowestMark);
+        System.out.println("The Highest Mark is: " + highestMark);
+        System.out.println("The Lowest Mark is: " + lowestMark);
 
         // Calculate mean and the StandardDeviation
         double mean = calculateMean(marks);
         double standardDeviation = calculateStandardDeviation(marks, mean);
-        System.out.println("Mean: " + mean);
-        System.out.println("Standard Deviation: " + standardDeviation);
+        System.out.println("Mean is: " + mean);
+        System.out.println("Standard Deviation is: " + standardDeviation);
 
         scanner.close();
     }
