@@ -37,5 +37,11 @@ public class AssignmentStatistics
         for (int i = 0; i < 30; i++) {
             System.out.println("The student " + (i + 1) + ": " + marks[i]);
         } // Combine both inputs
+
+        // Searching for highest and lowest marks
+        int highestMark = findHighestMark(marks);
+        int lowestMark = findLowestMark(marks);
+       
 }
+
 }
