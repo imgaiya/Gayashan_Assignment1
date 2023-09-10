@@ -17,8 +17,7 @@ public class AssignmentStatistics
         //Input assignment name
         System.out.print("Enter the assignment name here: ");
 
-    
-     int[] marks = new int[30];
+        int[] marks = new int[30];
         for (int i = 0; i < 30; i++) {
             int mark = -1; // Invalid mark error massage 
             while (mark < 0 || mark > 30) {
@@ -31,22 +30,32 @@ public class AssignmentStatistics
             marks[i] = mark;
         }
 
-    // Printing the assignment name
-     System.out.println("Assignment Name is: " + assignmentName);
-        System.out.println("Student Marks is:"); // Printing their marks
+        // Printing the assignment name
+        System.out.println("The Assignment Name is: " + assignmentName);
+        System.out.println("The Student Marks is:"); // Printing their marks
         for (int i = 0; i < 30; i++) {
             System.out.println("The student " + (i + 1) + ": " + marks[i]);
         } // Combine both inputs
 
-        // Searching for highest and lowest marks
+        // Print highest and lowest marks
         int highestMark = findHighestMark(marks);
         int lowestMark = findLowestMark(marks);
         
-        // Display Higjest and lowest marks
-        System.out.println("The Highest Mark is: " + highestMark);
-        System.out.println("The Lowest Mark is: " + lowestMark);
+        // Display highest and lowest marks
+        System.out.println("Highest Mark: " + highestMark);
+        System.out.println("Lowest Mark: " + lowestMark);
+
+        // Calculate mean and the StandardDeviation
+        double mean = calculateMean(marks);
+        double standardDeviation = calculateStandardDeviation(marks, mean);
+        System.out.println("Mean: " + mean);
+        System.out.println("Standard Deviation: " + standardDeviation);
+
+        scanner.close();
     }
-  public static int findHighestMark(int[] marks) {
+
+    // Highest mark function
+    public static int findHighestMark(int[] marks) {
         int highest = marks[0];
         for (int mark : marks) {
             if (mark > highest) {
@@ -56,7 +65,7 @@ public class AssignmentStatistics
         return highest;
     }
 
-    // Function to find the lowest mark
+    // Lowest mark function
     public static int findLowestMark(int[] marks) {
         int lowest = marks[0];
         for (int mark : marks) {
@@ -67,4 +76,23 @@ public class AssignmentStatistics
         return lowest;
     }
 
+    // Calculating the mean
+    public static double calculateMean(int[] marks) {
+        int sum = 0;
+        for (int mark : marks) {
+            sum += mark;
+        }
+        return (double) sum / marks.length;
+    }
+
+    // Calculate the standard deviation
+    public static double calculateStandardDeviation(int[] marks, double mean) {
+        double sumSquaredDifferences = 0;
+        for (int mark : marks) {
+            double difference = mark - mean;
+            sumSquaredDifferences += difference * difference;
+        }
+        double variance = sumSquaredDifferences / marks.length;
+        return Math.sqrt(variance);
+    }
 }
