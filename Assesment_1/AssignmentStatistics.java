@@ -4,7 +4,7 @@ import java.util.Scanner;
  * Write a description of class AssignmentStatistics here.
  *
  * @author (Gayashan)
- * @version (1.0 or a 09/10/2023)
+ * @version (1.0 09/10/2023)
  */
 public class AssignmentStatistics
 {
@@ -41,7 +41,30 @@ public class AssignmentStatistics
         // Searching for highest and lowest marks
         int highestMark = findHighestMark(marks);
         int lowestMark = findLowestMark(marks);
-       
-}
+        
+        // Display Higjest and lowest marks
+        System.out.println("The Highest Mark is: " + highestMark);
+        System.out.println("The Lowest Mark is: " + lowestMark);
+    }
+  public static int findHighestMark(int[] marks) {
+        int highest = marks[0];
+        for (int mark : marks) {
+            if (mark > highest) {
+                highest = mark;
+            }
+        }
+        return highest;
+    }
+
+    // Function to find the lowest mark
+    public static int findLowestMark(int[] marks) {
+        int lowest = marks[0];
+        for (int mark : marks) {
+            if (mark < lowest) {
+                lowest = mark;
+            }
+        }
+        return lowest;
+    }
 
 }
