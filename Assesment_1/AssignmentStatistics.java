@@ -26,7 +26,7 @@ public class AssignmentStatistics
                 mark = scanner.nextInt();
                 if (mark < 0 || mark > 30) {
                     System.out.println("You have entered an invalid amount. Please enter amount between 0 and 30.");
-                } // Reminder for the marks range
+                } // Reminder for the marks  range
             }
             marks[i] = mark;
         }
