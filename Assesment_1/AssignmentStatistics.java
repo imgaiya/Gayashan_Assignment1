@@ -33,6 +33,7 @@ public class AssignmentStatistics
 
     // Printing the assignment name
      System.out.println("Assignment Name is: " + assignmentName);
+        System.out.println("Student Marks is:"); // Printing their marks
         
 }
 }
