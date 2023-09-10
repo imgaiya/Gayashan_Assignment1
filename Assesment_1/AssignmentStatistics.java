@@ -1,10 +1,11 @@
 import java.util.Scanner;
 
 /**
- * Write a description of class AssignmentStatistics here.
+ * This Java program will help in collecting and evaluating 30 students' marks for an assignment. Then, it provides important information such as
+ * the average, the highest mark, and the lowest mark, the standard dev, and the mean of those marks. 
  *
  * @author (Gayashan)
- * @version (1.0 09/10/2023)
+ * @version (1.0 , 09/10/2023)
  */
 public class AssignmentStatistics
 {
@@ -24,7 +25,7 @@ public class AssignmentStatistics
                 System.out.print("Enter student mark " + (i + 1) + ": ");
                 mark = scanner.nextInt();
                 if (mark < 0 || mark > 30) {
-                    System.out.println("You have entered an invalid mark. Please enter a mark between 0 and 30.");
+                    System.out.println("You have entered an invalid amount. Please enter amount between 0 and 30.");
                 } // Reminder for the marks range
             }
             marks[i] = mark;
@@ -32,7 +33,9 @@ public class AssignmentStatistics
 
         // Printing the assignment name
         System.out.println("The Assignment Name is: " + assignmentName);
-        System.out.println("The Student Marks is:"); // Printing their marks
+        
+        // Printing their marks
+        System.out.println("The Student Marks is:"); 
         for (int i = 0; i < 30; i++) {
             System.out.println("The student " + (i + 1) + ": " + marks[i]);
         } // Combine both inputs
@@ -42,7 +45,7 @@ public class AssignmentStatistics
         int lowestMark = findLowestMark(marks);
         
         // Display highest and lowest marks
-        System.out.println("Highest Mark: " + highestMark);
+        System.out.println("Highest Mark is: " + highestMark);
         System.out.println("Lowest Mark: " + lowestMark);
 
         // Calculate mean and the StandardDeviation

@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=AssignmentStatistics
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ AssignmentStatistics\ here.\r\n\r\n\ @author\ (Gayashan)\r\n\ @version\ (1.0\ 09/10/2023)\r\n
+comment0.text=\r\n\ This\ Java\ program\ will\ help\u00A0in\ collecting\ and\ evaluating\u00A030\ students'\ marks\u00A0for\ an\ assignment.\ Then,\ it\ provides\ important\ information\ such\ as\r\n\ the\ average,\ the\ highest\ mark,\ and\ the\ lowest\ mark,\ the\ standard\ dev,\ and\ the\ mean\ of\ those\ marks.\u00A0\r\n\r\n\ @author\ (Gayashan)\r\n\ @version\ (1.0\ ,\ 09/10/2023)\r\n
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
 comment2.params=marks
