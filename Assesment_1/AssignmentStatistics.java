@@ -3,8 +3,8 @@ import java.util.Scanner;
 /**
  * Write a description of class AssignmentStatistics here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Gayashan)
+ * @version (1.0 or a 09/10/2023)
  */
 public class AssignmentStatistics
 {
